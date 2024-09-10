@@ -1,0 +1,15 @@
+// Fungsi asynchronous yang meniru pengambilan data dari server
+Future<String> fetchData() async {
+  // Menunggu selama 2 detik
+  await Future.delayed(Duration(seconds: 2));
+  return "Data telah diterima!";
+}
+
+void main() async {
+  print("Mengambil data...");
+  
+  // Menunggu hasil dari fetchData
+  String result = await fetchData();
+  
+  print(result);
+}
