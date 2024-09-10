@@ -1,0 +1,44 @@
+// Definisi kelas Mahasiswa
+class Mahasiswa {
+  // Property atau atribut kelas Mahasiswa
+  String nama;
+  int umur;
+  double nilaiAkhir;
+
+  // Konstruktor kelas Mahasiswa
+  Mahasiswa(this.nama, this.umur, this.nilaiAkhir);
+
+  // Fungsi untuk menampilkan detail mahasiswa
+  void tampilkanDetail() {
+    print('Nama: $nama');
+    print('Umur: $umur tahun');
+    print('Nilai Akhir: $nilaiAkhir');
+  }
+
+  // Fungsi untuk memeriksa kelulusan berdasarkan nilai
+  void cekKelulusan() {
+    if (nilaiAkhir >= 60.0) {
+      print('$nama lulus');
+    } else {
+      print('$nama tidak lulus');
+    }
+  }
+}
+
+// Fungsi utama
+void main() {
+  // Membuat objek mahasiswa dengan nama, umur, dan nilai akhir
+  Mahasiswa mhs1 = Mahasiswa('Dwita', 20, 75.5);
+  Mahasiswa mhs2 = Mahasiswa('Isma', 22, 55.0);
+
+  // Menampilkan detail mahasiswa
+  mhs1.tampilkanDetail();
+  mhs1.cekKelulusan();
+
+  print(''); // Memberikan jarak antara dua output
+
+  mhs2.tampilkanDetail();
+  mhs2.cekKelulusan();
+}
+
+
